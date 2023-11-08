@@ -1,0 +1,40 @@
+<main class="w-100 m-auto text-center">
+
+  <form [formGroup]="registerForm">
+
+      <img src="./assets/img/logo.png" alt="Logo" class="mb-1" width="150">
+      <h2 class="mb-2 fw-normal">EtecBook</h2>
+      <h5 class="mb-3 fw-normal">Criar sua Conta!!!</h5>
+
+      <div class="form-floating mb-2">
+          <input formControlName="name" type="text" class="form-control" id="name" placeholder="Nome Completo" [class.is-invalid]="f['name'].dirty && f['name'].invalid">
+          <label for="email">Nome de Completo</label>
+          <small *ngIf="f['name'].dirty && f['name'].errors?.['required']" class="text-danger text-start d-block my-1">Por favor, informe seu nome</small>
+      </div>
+
+      <div class="form-floating mb-2">
+        <input formControlName="email" type="text" class="form-control" id="email" placeholder="Email" [class.is-invalid]="f['email'].dirty && f['email'].invalid">
+        <label for="email">Email ou nome de Usuário</label>
+        <small *ngIf="f['email'].dirty && f['email'].errors?.['required']" class="text-danger text-start d-block my-1">Por favor, informe seu email</small>
+        <small *ngIf="f['email'].dirty && f['email'].errors?.['email']" class="text-danger text-start d-block my-1">Por favor, informe um email válido</small>
+    </div>
+
+      <div class="form-floating mb-2">
+          <input formControlName="password" type="text" class="form-control" id="password" placeholder="Senha de Acesso" [class.is-invalid]="f['password'].dirty && f['password'].invalid">
+          <label for="password">Senha de Acesso</label>
+          <small *ngIf="f['password'].dirty && f['password'].errors?.['required']" class="text-danger text-start d-block my-1">Por favor, informe uma senha</small>
+      </div>
+
+      <button (click)="onSubmit()" type="submit" class="w-100 btn btn-primary mb-2">Criar Conta</button>
+
+      <div class="separator">
+          <div class="line"></div>
+          <h6>Já Possui uma Conta?</h6>
+          <div class="line"></div>
+
+      </div>
+
+      <a routerLink="/login" class="w-100 btn btn-success mt-1">Faça Login</a>
+
+  </form>
+</main>

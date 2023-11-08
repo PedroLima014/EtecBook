@@ -1,0 +1,24 @@
+Após o clone do projeto
+
+Dotnet 
+    entrar na pasta Etecbook.server
+    dotnet restore
+
+Angular
+    entrar na pasta EtecbookUi
+    npm i
+
+dotnet ef 
+    entrar na pasta Etecbook.server
+    dotnet tool install --global dotnet-ef
+    
+    dotnet ef migrations add <nome da migração>
+    dotnet ef migrations add criar-banco
+
+    dotnet ef database update
+
+server
+    dotnet run
+
+EtecbookUi
+    ng serve -o

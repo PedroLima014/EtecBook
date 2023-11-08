@@ -1,0 +1,30 @@
+main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  width: 400px !important;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  color: var(--bs-body-color);
+  margin: 15px 0;
+}
+
+.separator h6 {
+  padding: 0 10px;
+  font-weight: normal;
+  color: var(--bs-body-color);
+  margin-bottom: 0.rem;
+}
+
+.separator .line {
+  flex: 1;
+  height: 1px;
+  background-color: var(--bs-body-color);
+}
